@@ -1,0 +1,12 @@
+stefan@desktop:~$ gpg --keyserver keys.gnupg.net --recv-keys
+988021A964E6EA7D
+gpg: klucz 988021A964E6EA7D: "Debian CD signing key <debian-cd@lists.debian.
+org>" bez zmian
+gpg: Ogółem przetworzonych kluczy: 1
+gpg: bez zmian: 1
+stefan@desktop:~$ gpg --keyserver keyserver.ubuntu.com --recv-keys
+988021A964E6EA7D
+gpg: klucz 988021A964E6EA7D: "Debian CD signing key <debian-cd@lists.debian.
+org>" bez zmian
+gpg: Ogółem przetworzonych kluczy: 1
+gpg: bez zmian: 1
