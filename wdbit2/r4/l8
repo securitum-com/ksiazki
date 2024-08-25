@@ -1,0 +1,5 @@
+$List = @(
+$(New-Object PSObject -Property @{Group = "Tier0ReplicationMaintenance";
+OUPrefix = "" })
+)
+.$ScriptsLocation\Scripts\Set-OUReplicationPermissions.ps1 -list $list
