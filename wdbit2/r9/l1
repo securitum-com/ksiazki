@@ -1,0 +1,6 @@
+┌──(root㉿kali)-[~]
+└─# nmcli device wifi
+BSSID SSID MODE CHAN RATE SIGNAL BARS SECURITY
+DE:AD:BA:BE:00:01 so-smart Infra 1 195 Mbit/s 100 ▂▄▆█ WPA2
+DE:AD:BA:BE:00:02 so-smart-tv5 Infra 36 405 Mbit/s 94 ▂▄▆█ WPA2
+DE:AD:BA:BE:00:03 Korpo-OFFICE Infra 36 405 Mbit/s 94 ▂▄▆█ WPA2 802.1X
