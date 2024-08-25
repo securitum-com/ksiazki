@@ -1,0 +1,6 @@
+R666#sh ip ospf interface lo33
+Loopback33 is up, line protocol is up
+Internet Address 100.100.33.1/24, Interface ID 12, Area 33
+Attached via Interface Enable
+Process ID 100, Router ID 100.100.254.66, Network Type POINT_TO_POINT,
+Cost: 1
