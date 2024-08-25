@@ -1,0 +1,8 @@
+$GpoLinks = @(
+$(New-Object PSObject -Property @{ Name = "Audit Key Events" ; OU =
+"OU=Domain Controllers"; Order = 1 ; LinkEnabled = 'YES' }),
+$(New-Object PSObject -Property @{ Name = "Audit Powershell" ; OU =
+"OU=Domain Controllers"; Order = 1 ; LinkEnabled = 'YES' })
+)
+.$ScriptsLocation\Scripts\Link-GpoToOU.ps1 -GpoLinks $GpoLinks -Verbose
+Set-Location $location
