@@ -1,0 +1,4 @@
+$location = Get-Location
+$ScriptsLocation = "C:\Tools\WdBIT2-AD\DC Audit Policies"
+Set-Location $ScriptsLocation
+Import-Module ActiveDirectory
