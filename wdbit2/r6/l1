@@ -1,0 +1,10 @@
+stefan@desktop:~$ gpg --keyserver keyring.debian.org --recv-keys
+0x988021A964E6EA7D
+gpg: klucz 988021A964E6EA7D: klucz publiczny ,,Debian CD signing key
+<debian-cd@lists.debian.org>'' wczytano do zbioru
+gpg: Ogółem przetworzonych kluczy: 1
+gpg: dołączono do zbioru: 1
+stefan@desktop:~$ gpg --keyserver keyring.debian.org --recv-keys
+0xDA87E80D6294BE9B
+gpg: Ogółem przetworzonych kluczy: 1
+gpg: dołączono do zbioru: 1
