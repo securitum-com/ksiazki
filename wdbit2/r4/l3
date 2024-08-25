@@ -1,0 +1,6 @@
+Set-GpInheritance -Target "OU=Devices,OU=Tier0,OU=Admin,$dnc" -IsBlocked Yes
+| Out-Null
+Set-GpInheritance -Target "OU=Devices,OU=Tier1,OU=Admin,$dnc" -IsBlocked Yes
+| Out-Null
+Set-GpInheritance -Target "OU=Devices,OU=Tier2,OU=Admin,$dnc" -IsBlocked Yes
+| Out-Null
