@@ -1,0 +1,5 @@
+┌──(root㉿kali)-[~]
+└─# bettercap -iface wlan0
+bettercap v2.32.0 (built for linux arm64 with go1.18.1) [type 'help' for a
+list of commands]
+wlan0 »
