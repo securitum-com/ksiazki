@@ -1,0 +1,18 @@
+R1-64500#sh ip route 100.100.33.0
+Routing entry for 100.100.33.0/24
+Known via "ospf 100", distance 110, metric 2000, type inter area
+Last update from 100.100.1.33 on GigabitEthernet1, 00:03:42 ago
+Routing Descriptor Blocks:
+* 100.100.1.33, from 100.100.254.33, 00:03:42 ago, via GigabitEthernet1
+Route metric is 2000, traffic share count is 1
+R1-64500#sh ipv6 route 2001:db8:100:33::/64
+Routing entry for 2001:DB8:100:33::/64
+Known via "ospf 100", distance 110, metric 2000, type inter area
+Route count is 1/1, share count 0
+Łukasz Bromirski // Bezpieczeństwo globalnego i lokalnego routingu IP
+466
+Routing paths:
+FE80::5054:FF:FE1C:C207, GigabitEthernet1
+Route metric is 2000, traffic share count is 1
+From FE80::5054:FF:FE1C:C207
+Last updated 00:03:55 ago
