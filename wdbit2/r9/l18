@@ -1,0 +1,5 @@
+Capturing on 'wlan0'
+1 0.000000 192.168.1.2 → 192.168.1.1 EAPOL 114 Key (Message 1 of 4)
+2 0.001000 192.168.1.1 → 192.168.1.2 EAPOL 114 Key (Message 2 of 4)
+3 0.002000 192.168.1.2 → 192.168.1.1 EAPOL 114 Key (Message 3 of 4)
+4 0.003000 192.168.1.1 → 192.168.1.2 EAPOL 114 Key (Message 4 of 4)
