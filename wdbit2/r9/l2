@@ -1,0 +1,13 @@
+┌──(root㉿kali)-[~]
+└─# wifite
+. .
+.´ · . . · `. wifite2 2.6.0
+: : : (¯) : : : a wireless auditor by derv82
+`. · ` /¯\ ´ · .´ maintained by kimocoder
+` /¯¯¯\ ´ https://github.com/kimocoder/wifite2
+[+] Using wlan0mon already in monitor mode
+NUM ESSID CH ENCR POWER WPS? CLIENT
+--- ------------------------- --- ----- ----- ---- ------
+1 so-smart 1 WPA-P 58db no 1
+[+] Scanning. Found 1 target(s), 1 client(s). Ctrl+C when ready ^C
+[+] select target(s) (1-1) separated by commas, dashes or all: 1
