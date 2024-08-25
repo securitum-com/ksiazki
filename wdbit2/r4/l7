@@ -1,0 +1,9 @@
+$List = @(
+$(New-Object PSObject -Property @{Group = "Tier2WorkstationMaintenance";
+OUPrefix = "OU=Quarantine" }),
+$(New-Object PSObject -Property @{Group = "Tier2WorkstationMaintenance";
+OUPrefix = "OU=Workstations" }),
+$(New-Object PSObject -Property @{Group = "Tier1ServerMaintenance"; OUPrefix
+= "OU=Tier 1 Servers" })
+)
+.$ScriptsLocation\Scripts\Set-OUComputerPermissions.ps1 -list $list
