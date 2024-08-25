@@ -1,0 +1,4 @@
+aspa-set {
+customer-as 64501 provider-as { 64505 64509 }
+customer-as 64502 provider-as { 64491 64492 64493 }
+}
