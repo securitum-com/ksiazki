@@ -1,0 +1,8 @@
+root@serwer:~# chage -l stefan
+Last password change : May 22, 2023
+Password expires : never
+Password inactive : never
+Account expires : Dec 31, 2025
+Minimum number of days between password change : 0
+Maximum number of days between password change : 99999
+Number of days of warning before password expires : 7
