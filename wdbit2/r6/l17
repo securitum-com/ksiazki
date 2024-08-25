@@ -1,0 +1,14 @@
+root@serwer:~# systemctl list-timers
+LAST PASSED UNIT ACTIVATES
+Sat 2024-04-13 00:00:01 22h ago logrotate.timer logrotate.service
+root@serwer:~# systemctl cat logrotate.timer
+...
+[Timer]
+OnCalendar=daily
+root@serwer:~# systemctl cat logrotate.service
+...
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/logrotate /etc/logrotate.conf
+Nice=19
+PrivateTmp=true
