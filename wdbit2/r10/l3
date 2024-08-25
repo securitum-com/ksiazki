@@ -1,0 +1,13 @@
+$ docker history securitum:app
+IMAGE CREATED CREATED BY SIZE
+eda6fc35a870 8 hours ago /bin/sh -c #(nop) COPY
+dir:d58f590f764b682e1... 10B
+e0888ccbb442 8 hours ago /bin/sh -c #(nop) WORKDIR/app 0B
+6c2e041055fc 8 hours ago /bin/sh -c #(nop)
+USER limited:limited 0B
+8f3e9b2ee664 10 hours ago /bin/sh -c adduser -D limited -s 4.68kB
+fad0f3c8ed2a 10 hours ago /bin/bash /bin/sh -c apk update
+&& apk add --no-cache curl bash 6.69MB
+e66264b98777 3 weeks ago /bin/sh -c #(nop) CMD ["/bin/sh"] 0B
+<missing> 3 weeks ago /bin/sh -c #(nop) ADD
+file:8e81116368669ed3d... 5.53MB
