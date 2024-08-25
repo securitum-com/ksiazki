@@ -1,0 +1,23 @@
+interface Loopback0
+description Interfejs lo0 będący identyfikatorem routera w AS64500
+ip address 100.100.254.10 255.255.255.255
+ipv6 address 2001:DB8:100:254::10/128
+ipv6 ospf network point-to-point
+ipv6 ospf 100 area 0
+!
+interface GigabitEthernet1
+description Interfejs do obszaru 0 AS64500
+ip address 100.100.1.10 255.255.255.0
+negotiation auto
+ipv6 address 2001:DB8:100:1::10/64
+ipv6 ospf 100 area 0
+!
+router ospfv3 100
+router-id 100.100.254.10
+auto-cost reference-bandwidth 1000000
+!
+router ospf 100
+router-id 100.100.254.10
+network 100.100.0.0 0.0.255.255 area 0
+auto-cost reference-bandwidth 1000000
+!
