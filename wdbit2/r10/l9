@@ -1,0 +1,3 @@
+# Polecenie uruchomione w wierszu poleceń hosta
+$ docker run --rm --user www-data -it ubuntu:22.04 id
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
