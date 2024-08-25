@@ -1,0 +1,7 @@
+FROM node:20.15.0-alpine3.20
+USER node
+WORKDIR /app
+COPY package.json package-lock.json /app
+RUN npm ci
+COPY ./src /app/src
+ENTRYPOINT node /app/src/index.js
