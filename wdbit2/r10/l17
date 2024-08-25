@@ -1,0 +1,8 @@
+# Polecenie uruchomione w wierszu poleceń hosta
+$ cat config.conf
+Super secret
+$ docker run --rm -v /home/jarosinskik/config.conf:/app/config.conf:ro -it
+ubuntu: 22.04 bash -c 'echo "Hacked" >> /app/config.conf'
+bash: line 1: /app/config.conf: Read-only file system
+$ cat config.conf
+Super secret
