@@ -1,0 +1,6 @@
+stefan@serwer:~$ cat .ssh/authorized_keys
+# zwyczajny klucz do logowania i pracy w powłoce
+ssh-ed25519 AAAAC3NzaC1lZDI1EA...
+# klucz dla automatu do pobierania statystyk
+from="10.0.3.1",restrict,command="/opt/statystyki" ssh-ed25519
+AAAAfQx123g...
