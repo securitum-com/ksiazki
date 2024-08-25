@@ -1,0 +1,13 @@
+┌──(root㉿kali)-[~]
+└─# hcxpcapngtool -o pmkid.22000 bettercap-wifi-handshakes.pcap
+hcxpcapngtool 6.2.6 reading from bettercap-wifi-handshakes.pcap...
+summary capture file
+--------------------
+file name................................: bettercap-wifi-handshakes.pcap
+[...]
+PMKID (total)............................: 1
+PMKID (best).............................: 1
+PMKID written to 22000 hash file.........: 1
+frequency statistics from radiotap header (frequency: received packets)
+-----------------------------------------------------------------------
+2412: 1 2417: 1
