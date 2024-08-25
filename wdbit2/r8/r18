@@ -1,0 +1,27 @@
+R666(config)#ipv6 unicast-routing
+R666(config)#int lo0
+R666(config-if)#ip address 100.100.254.66 255.255.255.255
+R666(config-if)#ipv6 address 2001:db8:100:254::66/128
+R666(config-if)#ipv6 ospf 100 area 0
+R666(config-if)#exit
+R666(config)#int lo66
+R666(config-if)#ip address 100.100.66.1 255.255.255.0
+R666(config-if)#ipv6 address 2001:db8:100:66::1/64
+R666(config-if)#ipv6 ospf 100 area 0
+R666(config-if)#ip ospf network point-to-point
+R666(config-if)#ip ospf 100 area 66
+R666(config-if)#exit
+R666(config)#int gi1
+R666(config-if)#ip address 100.100.1.66 255.255.255.0
+R666(config-if)#ipv6 address 2001:DB8:100:1::66/64
+R666(config-if)#ipv6 ospf 100 area 0
+R666(config-if)#exit
+R666(config)#router ospf 100
+R666(config-router)#router-id 100.100.254.66
+R666(config-router)#network 100.100.0.0 0.0.255.255 area 0
+R666(config-router)#auto-cost reference-bandwidth 1000000
+R666(config-router)#exit
+R666(config)#router ospfv3 100
+R666(config-router)#router-id 100.100.254.66
+R666(config-router)#auto-cost reference-bandwidth 1000000
+R666(config-router)#exit
