@@ -1,0 +1,12 @@
+# Polecenie uruchomione w wierszu poleceń hosta
+$ docker inspect bridge | jq '.[0].Containers'
+{
+"49316bdcb8b0a1ab171f24fc569f7e9756dfd6facb0b851ed0dc4a2d43ec37bc": {
+"Name": "kali1",
+"EndpointID":
+"c4cd6fc901a1f4fd65e67f4aa0f1675a2010324a554fc8b5ea60b18a8b6347a6",
+"MacAddress": "02:42:ac:11:00:02",
+"IPv4Address": "172.17.0.2/16",
+"IPv6Address": ""
+}
+}
