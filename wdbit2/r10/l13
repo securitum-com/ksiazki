@@ -1,0 +1,5 @@
+# Polecenie uruchomione w wierszu poleceń hosta
+$ docker network create net-kali1
+1ffe4e570b2f4c090ca16f6c85a1eb15f0a6f13461fd08026367729d7ea85405
+$ docker network create net-kali2
+fdb0ece963ae8227089c49c921c2c35614f4483b6995ac0bebbb5d4eabfd2282
