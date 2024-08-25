@@ -1,0 +1,5 @@
+$ docker run --mount type=tmpfs,destination=/app,tmpfs-mode=1777,tmpfs-
+size=1M securitum:lalalatest bash -c 'cat /dev/random > /app/test || ls -lah
+/app/test'
+cat: write error: No space left on device
+-rw-r--r-- 1 root root 1.0M Jun 29 14:37 /app/test
