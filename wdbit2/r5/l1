@@ -1,0 +1,4 @@
+.\Get-AADAudit.ps1 -AuditPath 'X:\temp' '
+-IncludeRAW -CliXMLPath '.\CertificateThumbprint.xml' -SecretCliXMLPath
+".\AppSecret.xml" -ApplicationID 'Twoje_Application_ID' -TenantID
+'Twoje_Tenant_ID'
