@@ -1,0 +1,8 @@
+as64502(config)#ip prefix-list AS64499-IPv4 permit 100.99.99.0/24
+as64502(config)#ipv6 prefix-list AS64499-IPv6 permit 2001:db8:99::/48
+as64502(config)#router bgp 64502
+as64502(config-router)#address-family ipv4
+as64502(config-router-af)#neighbor 100.92.29.9 prefix-list AS64499-IPv4 in
+as64502(config-router-af)#exit
+as64502(config-router)#address-family ipv6
+as64502(config-router-af)#neighbor 2001:DB8:9229::9 prefix-list AS64499-IPv6 in
