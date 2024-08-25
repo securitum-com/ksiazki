@@ -1,0 +1,6 @@
+root@serwer:~# lsattr *.txt
+----i---------e------- nie_da_się_skasować_ani_przenieść.txt
+root@serwer:~# chattr -i nie_da_się_skasować_ani_przenieść.txt
+root@serwer:~# mv nie_da_się_skasować_ani_przenieść.txt już_można.txt
+root@serwer:~# lsattr *.txt
+--------------e------- już_można.txt
