@@ -1,0 +1,7 @@
+root@serwer:~# which nano
+/usr/bin/nano
+root@serwer:~# ls -la /usr/bin/nano
+-rwxr-xr-x 1 root root 287480 2023-01-18 /usr/bin/nano
+root@serwer:~# chmod u+s /usr/bin/nano # Game over.
+root@serwer:~# ls -la /usr/bin/nano
+-rwsr-xr-x 1 root root 287480 2023-01-18 /usr/bin/nano
