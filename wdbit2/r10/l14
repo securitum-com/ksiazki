@@ -1,0 +1,6 @@
+# Polecenie uruchomione w wierszu poleceń hosta
+$ docker run --rm -it --name "kali1" --network "net-kali1" kalilinux/kali-
+rolling bash -c "apt-get update && apt-get install -y ncat && ncat -lvp
+31337"
+$ docker run --rm -it --name "kali2" --network "net-kali2" kalilinux/kali-
+rolling bash -c "apt-get update && apt-get install -y ncat && bash"
