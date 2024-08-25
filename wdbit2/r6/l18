@@ -1,0 +1,11 @@
+[Unit]
+Description=Moja usluga
+[Service]
+ExecStart=/usr/local/bin/mojausluga -x --parametr=123abc
+Type=simple
+# należy użyć "oneshot" zamiast "simple", jeśli uruchamiany jest
+# skrypt lub program, który nie działa jako demon (np. czekając na
+# połączenia), ale kończy się natychmiast po wykonaniu zadania
+[Install]
+WantedBy=multi-user.target
+# cel "multi-user" to "normalny" start systemu
