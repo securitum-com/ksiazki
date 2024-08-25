@@ -1,0 +1,23 @@
+$ snyk container test nginx:1.23.3-alpine
+Testing nginx:1.23.3-alpine...
+[...]
+✗ Critical severity vulnerability found in curl/libcurl
+Description: Out-of-bounds Write
+Info: https://security.snyk.io/vuln/SNYK-ALPINE317-CURL-5958910
+Introduced through: curl/libcurl@7.87.0-r1, curl/curl@7.87.0-r1
+From: curl/libcurl@7.87.0-r1
+From: curl/curl@7.87.0-r1 > curl/libcurl@7.87.0-r1
+From: curl/curl@7.87.0-r1
+Image layer: 'apk add --no-cache curl ca-certificates'
+Fixed in: 8.4.0-r0
+Organization: sekurak
+Package manager: apk
+Project name: docker-image|nginx
+Docker image: nginx:1.23.3-alpine
+Platform: linux/amd64
+Base image: nginx:1.23.3-alpine
+Licenses: enabled
+Tested 62 dependencies for known issues, found 68 issues.
+Base Image Vulnerabilities Severity
+nginx:1.23.3-alpine 68 2 critical, 15 high, 45 medium, 6 low
+[...]
