@@ -1,0 +1,8 @@
+$GpoLinks = @(
+$(New-Object PSObject -Property @{ Name = "KDC Support for claims";
+OU = "OU=Domain Controllers"; Order = 2 ;LinkEnabled = 'YES'}),
+$(New-Object PSObject -Property @{ Name = "Kerberos client support for
+claims" ; OU = ""; Order = 2 ;LinkEnabled = 'YES'})
+)
+.$ScriptsLocation\Scripts\Link-GpoToOU.ps1 -GpoLinks $GpoLinks -Verbose
+Set-Location $location
