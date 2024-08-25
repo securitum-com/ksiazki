@@ -1,0 +1,5 @@
+# Polecenie uruchomione w wierszu poleceń hosta
+$ docker run --rm -it --memory="150m" --cpus="0.2" -v /home/jarosinskik/
+files/:/
+files:ro kalilinux/kali-rolling bash -c "apt-get update && apt-get install
+-y zip && bash"
