@@ -1,0 +1,7 @@
+$List = @(
+$(New-Object PSObject -Property @{Group = "Tier1Admins"; OUPrefix = "OU=Grou
+ps,ou=Tier1,ou=Admin"}),
+$(New-Object PSObject -Property @{Group = "Tier2Admins"; OUPrefix =
+"OU=Groups,ou=Tier2,ou=Admin"})
+)
+.$ScriptsLocation\Scripts\Set-OUGroupPermissions.ps1 -list $list
