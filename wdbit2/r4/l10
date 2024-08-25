@@ -1,0 +1,4 @@
+$location = Get-Location
+$ScriptsLocation = "C:\WdBIT2-AD\PAW"
+Set-Location $ScriptsLocation
+Import-Module ActiveDirectory
