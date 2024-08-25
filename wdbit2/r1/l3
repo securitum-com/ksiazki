@@ -1,0 +1,9 @@
+data_to_overwrite = allocated_region;
+if (allocated_region < puVar1) {
+value_to_write = 0xffffffff;
+do {
+*allocated_region = value_to_write;
+allocated_region = allocated_region + 1;
+value_to_write = value_to_write - 1;
+} while (allocated_region < puVar1);
+}
