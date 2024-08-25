@@ -1,0 +1,21 @@
+┌──(root㉿kali)-[~]
+└─# wget http://old.kali.org/kali/pool/main/libp/libpcap/libpcap0.8_1.9.1-4_arm64.deb
+--2024-06-12 16:35:09-- http://old.kali.org/kali/pool/main/libp/libpcap/
+libpcap0.8_1.9.1-4_arm64.deb
+Resolving old.kali.org (old.kali.org)... 54.39.49.227
+Connecting to old.kali.org (old.kali.org)|54.39.49.227|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 145852 (142K) [application/vnd.debian.binary-package]
+Saving to: 'libpcap0.8_1.9.1-4_arm64.deb'
+libpcap0.8_1.9.1-4_arm64.deb 100%[======>] 142.43K 204KB/s in 0.7s
+2024-06-12 16:35:10 (204 KB/s) - 'libpcap0.8_1.9.1-4_arm64.deb' saved
+[145852/145852]
+┌──(root㉿kali)-[~]
+└─# dpkg -i libpcap0.8_1.9.1-4_arm64.deb
+dpkg: warning: downgrading libpcap0.8:arm64 from 1.10.1-4 to 1.9.1-4
+(Reading database ... 315937 files and directories currently installed.)
+Preparing to unpack libpcap0.8_1.9.1-4_arm64.deb ...
+Unpacking libpcap0.8:arm64 (1.9.1-4) over (1.10.1-4) ...
+Setting up libpcap0.8:arm64 (1.9.1-4) ...
+Processing triggers for libc-bin (2.33-6) ...
+Processing triggers for man-db (2.10.2-1) ...
