@@ -1,0 +1,5 @@
+$location = Get-Location
+$dNC = (Get-ADRootDSE).defaultNamingContext
+$ScriptsLocation = "C:\WdBIT2-AD\Tiering"
+Set-Location $ScriptsLocation
+Import-Module ActiveDirectory
