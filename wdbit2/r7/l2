@@ -1,0 +1,5 @@
+spanning-tree mode pvst
+spanning-tree extend system-id
+spanning-tree vlan 1 priority 0
+spanning-tree vlan 10 priority 4096
+spanning-tree vlan 20 priority 28672
