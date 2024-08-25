@@ -1,0 +1,5 @@
+# Polecenie uruchomione w wierszu poleceń hosta
+$ docker run --rm --read-only -it ubuntu:22.04 bash -c 'id; echo "test" > ~
+/test.txt'
+uid=0(root) gid=0(root) groups=0(root)
+bash: line 1: /root/test.txt: Read-only file system
