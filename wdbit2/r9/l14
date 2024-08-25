@@ -1,0 +1,11 @@
+┌──(root㉿kali)-[~]
+└─# hashcat -m 22000 pmkid.22000 wordlist.txt
+hashcat (v6.2.5) starting
+OpenCL API (OpenCL 2.0 pocl 1.8 Linux, None+Asserts, RELOC, LLVM 11.1.0,
+SLEEF, POCL_DEBUG) - Platform #1 [The pocl project]
+============================================================================
+* Device #1: pthread-0x000, 2914/5892 MB (1024 MB allocatable), 4MCU
+[..]
+Approaching final keyspace - workload adjusted.
+6558768967730145409799c37e3786d4:2cc81b4eaef0:9e23525935ea:
+so-smart:lukrecja-szmaragdy-45
