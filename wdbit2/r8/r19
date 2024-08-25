@@ -1,0 +1,41 @@
+R10#sh ip ospf neighbor
+Neighbor ID Pri State Dead Time Address Interface
+100.100.254.1 1 FULL/BDR 00:00:31 100.100.1.1 GigabitEthernet1
+100.100.254.2 1 FULL/DR 00:00:31 100.100.1.2 GigabitEthernet1
+100.100.254.19 1 2WAY/DROTHER 00:00:39 100.100.1.19 GigabitEthernet1
+100.100.254.33 1 2WAY/DROTHER 00:00:36 100.100.1.33 GigabitEthernet1
+100.100.254.66 1 2WAY/DROTHER 00:00:39 100.100.1.66 GigabitEthernet1
+R10#sh ipv6 ospf neighbor
+OSPFv3 Router with ID (100.100.254.10) (Process ID 100)
+Neighbor ID Pri State Dead Time Interface ID Interface
+100.100.254.1 1 FULL/DR 00:00:35 5 GigabitEthernet1
+100.100.254.2 1 FULL/BDR 00:00:39 5 GigabitEthernet1
+100.100.254.19 1 2WAY/DROTHER 00:00:36 5 GigabitEthernet1
+100.100.254.33 1 2WAY/DROTHER 00:00:39 5 GigabitEthernet1
+100.100.254.66 1 2WAY/DROTHER 00:00:39 5 GigabitEthernet1
+R1-64500#sh ip route ospf | b ^Gateway
+Gateway of last resort is not set
+100.0.0.0/8 is variably subnetted, 13 subnets, 3 masks
+O IA 100.100.10.0/24
+[110/2000] via 100.100.1.10, 00:06:58, GigabitEthernet1
+O IA 100.100.19.0/24
+[110/2000] via 100.100.1.19, 00:06:40, GigabitEthernet1
+O IA 100.100.33.0/24
+[110/2000] via 100.100.1.33, 00:02:36, GigabitEthernet1
+O IA 100.100.66.0/24
+[110/1001] via 100.100.1.66, 00:25:03, GigabitEthernet1
+[...]
+O 100.100.254.66/32
+[110/1001] via 100.100.1.66, 00:26:03, GigabitEthernet1
+R1-64500#sh ipv6 route ospf | b ^O
+OI 2001:DB8:100:10::/64 [110/2000]
+via FE80::5054:FF:FE09:2A87, GigabitEthernet1
+OI 2001:DB8:100:19::/64 [110/2000]
+via FE80::5054:FF:FE1E:75E5, GigabitEthernet1
+OI 2001:DB8:100:33::/64 [110/2000]
+via FE80::5054:FF:FE1C:C207, GigabitEthernet1
+OI 2001:DB8:100:66::/64 [110/1001]
+via FE80::5054:FF:FE09:823A, GigabitEthernet1
+[...]
+O 2001:DB8:100:254::66/128 [110/1000]
+via FE80::5054:FF:FE09:823A, GigabitEthernet1
