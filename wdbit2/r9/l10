@@ -1,0 +1,5 @@
+$ /usr/lib/hashcat-utils/cap2hccapx.bin /root/bettercap-wifi-handshakes.pcap
+bettercap-wifi-handshakes.hccapx
+Networks detected: 1
+[*] BSSID=de:ad:ba:be:00:02 ESSID=so-smart (Length: 10)
+Written 1 WPA Handshake to: bettercap-wifi-handshakes.hccapx
