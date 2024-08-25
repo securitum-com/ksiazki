@@ -1,0 +1,3 @@
+# Polecenie uruchomione w wierszu poleceń hosta
+$ docker run --rm -it --name "kali2" kalilinux/kali-rolling bash -c
+"apt-get update && apt-get install -y ncat && bash"
