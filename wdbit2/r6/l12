@@ -1,0 +1,5 @@
+Match Group automaty
+PasswordAuthentication no
+DisableForwarding yes
+ForceCommand internal-sftp
+ChrootDirectory /srv/pliki
