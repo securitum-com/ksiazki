@@ -1,0 +1,4 @@
+User_alias MONTERZY = tomasz, barbara, @serwisanci
+Cmnd_alias DYSKOWE = /bin/mount, /bin/umount, /sbin/parted, /sbin/[cs]fdisk
+# obejmuje fdisk, cfdisk i sfdisk
+MONTERZY ALL=(root) NOPASSWD: DYSKOWE
