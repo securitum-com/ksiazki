@@ -1,0 +1,25 @@
+root@serwer:~# getfacl /srv/archiwum-ksiegowosci
+getfacl: Removing leading '/' from absolute path names
+# file: srv/archiwum-ksiegowosci
+# owner: ksiegowosc # właściciel pliku
+# group: ksiegowosc # grupa pliku
+# _________ poniżej "zwykła" ACL _________
+user::rwx # właściciel katalogu ma pełnię praw
+user:ksiegowosc:rwx # użytkownik ksiegowosc także
+user:prezes:r-x # prezes ma wstęp/odczyt, ale nie zapis
+group::rwx # grupa przypisana do katalogu ma pełnię praw
+group:ksiegowosc:rwx # grupa ksiegowosc ma pełnię praw
+group:audytorzy:r-x # grupa audytorzy – wstęp/odczyt, bez zapisu
+group:praktykanci:--- # grupa praktykanci – brak dostępu (zakaz)
+mask::rwx # maska – tutaj nie ma wpływu na prawa
+other::---
+# _ poniżej domyślna ACL – taką dostaną nowo
+# tworzone pliki _
+default:user::rwx
+default:user:ksiegowosc:rwx
+default:user:prezes:r-x
+default:group:audytorzy:r-x
+default:group:praktykanci:---
+default:group::rwx
+default:mask::rwx
+default:other::---
