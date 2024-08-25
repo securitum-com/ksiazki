@@ -1,0 +1,79 @@
+$OUs = @(
+$(New-Object PSObject -Property @{Name = "Admin"; ParentOU = "" }),
+$(New-Object PSObject -Property @{Name = "Groups"; ParentOU = "" }),
+$(New-Object PSObject -Property @{Name = "Tier 1 Servers"; ParentOU = "" }),
+$(New-Object PSObject -Property @{Name = "Workstations"; ParentOU = "" }),
+$(New-Object PSObject -Property @{Name = "User accounts"; ParentOU = "" }),
+$(New-Object PSObject -Property @{Name = "Quarantine"; ParentOU = "" })
+)
+.$ScriptsLocation\Scripts\Create-OU.ps1 -OUs $OUs
+$OUs = @(
+$(New-Object PSObject -Property @{Name = "Tier0"; ParentOU = "ou=Admin" }),
+$(New-Object PSObject -Property @{Name = "Tier1"; ParentOU = "ou=Admin" }),
+$(New-Object PSObject -Property @{Name = "Tier2"; ParentOU = "ou=Admin" }),
+$(New-Object PSObject -Property @{Name = "Accounts"; ParentOU =
+"ou=Tier0,ou=Admin" }),
+$(New-Object PSObject -Property @{Name = "Groups"; ParentOU =
+"ou=Tier0,ou=Admin" }),
+$(New-Object PSObject -Property @{Name = "Service Accounts"; ParentOU =
+"ou=Tier0,ou=Admin" }),
+$(New-Object PSObject -Property @{Name = "Devices"; ParentOU ="ou=Tier0,ou=Admin" }),
+$(New-Object PSObject -Property @{Name = "Tier0 Servers"; ParentOU =
+"ou=Tier0,ou=Admin" }),
+$(New-Object PSObject -Property @{Name = "Accounts"; ParentOU =
+"ou=Tier1,ou=Admin" }),
+$(New-Object PSObject -Property @{Name = "Groups"; ParentOU =
+"ou=Tier1,ou=Admin" }),
+$(New-Object PSObject -Property @{Name = "Service Accounts"; ParentOU =
+"ou=Tier1,ou=Admin" }),
+$(New-Object PSObject -Property @{Name = "Devices"; ParentOU =
+"ou=Tier1,ou=Admin" }),
+$(New-Object PSObject -Property @{Name = "Accounts"; ParentOU =
+"ou=Tier2,ou=Admin" }),
+$(New-Object PSObject -Property @{Name = "Groups"; ParentOU =
+"ou=Tier2,ou=Admin" }),
+$(New-Object PSObject -Property @{Name = "Service Accounts"; ParentOU =
+"ou=Tier2,ou=Admin" }),
+$(New-Object PSObject -Property @{Name = "Devices"; ParentOU =
+"ou=Tier2,ou=Admin" })
+)
+.$ScriptsLocation\Scripts\Create-OU.ps1 -OUs $OUs
+$OUs = @(
+$(New-Object PSObject -Property @{Name = "Security Groups"; ParentOU =
+"ou=Groups" }),
+$(New-Object PSObject -Property @{Name = "Distribution Groups"; ParentOU =
+"ou=Groups" }),
+$(New-Object PSObject -Property @{Name = "Contacts"; ParentOU = "ou=Groups" })
+)
+.$ScriptsLocation\Scripts\Create-OU.ps1 -OUs $OUs
+$OUs = @(
+$(New-Object PSObject -Property @{Name = "Application"; ParentOU = "ou=Tier
+1 Servers" }),
+$(New-Object PSObject -Property @{Name = "Collaboration"; ParentOU =
+"ou=Tier 1 Servers" }),
+$(New-Object PSObject -Property @{Name = "Database"; ParentOU = "ou=Tier 1
+Servers" }),
+$(New-Object PSObject -Property @{Name = "Messaging"; ParentOU = "ou=Tier 1
+Servers" }),
+$(New-Object PSObject -Property @{Name = "Staging"; ParentOU = "ou=Tier 1
+Servers" })
+)
+.$ScriptsLocation\Scripts\Create-OU.ps1 -OUs $OUs
+$OUs = @(
+$(New-Object PSObject -Property @{Name = "Desktops"; ParentOU =
+"ou=Workstations" }),
+$(New-Object PSObject -Property @{Name = "Kiosks"; ParentOU =
+"ou=Workstations" }),
+$(New-Object PSObject -Property @{Name = "Laptops"; ParentOU =
+"ou=Workstations" }),
+$(New-Object PSObject -Property @{Name = "Staging"; ParentOU =
+"ou=Workstations" })
+)
+.$ScriptsLocation\Scripts\Create-OU.ps1 -OUs $OUs
+$OUs = @(
+$(New-Object PSObject -Property @{Name = "Enabled Users"; ParentOU =
+"ou=User Accounts" }),
+$(New-Object PSObject -Property @{Name = "Disabled Users"; ParentOU =
+"ou=User Accounts" })
+)
+.$ScriptsLocation\Scripts\Create-OU.ps1 -OUs $Ous
