@@ -1,0 +1,11 @@
+as64509#traceroute 100.100.33.80 source loopback 0
+Type escape sequence to abort.
+Tracing the route to 100.100.33.80
+VRF info: (vrf in name/id, vrf out name/id)
+1 100.64.39.3 2 msec 1 msec 1 msec
+2 100.92.39.9 4 msec * 3 msec
+as64509#traceroute 2001:DB8:100:33::33 source loopback 0
+Type escape sequence to abort.
+Tracing the route to 2001:DB8:100:33::33
+1 2001:DB8:6439::3 17 msec 1 msec 1 msec
+2 2001:DB8:9239::9 12 msec 2 msec 2 msec
