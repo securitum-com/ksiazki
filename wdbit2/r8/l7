@@ -1,0 +1,22 @@
+! konfiguracja procesu OSPF - aktywujemy GTSM na wszystkich interfejsach
+router bgp 3356
+bgp rpki server tcp 33.56.99.1 port 3323 refresh 3600
+! weryfikacja, że połączenie z serwerem zostało nawiązane poprawnie –
+! otrzymujemy ponad 200 tysięcy prefiksów
+RTR#show bgp rpki server 100.100.3.179
+RPKI Cache-Server 100.100.3.179
+Transport: TCP port 3323
+Connect state: ESTAB
+[...]
+Protocol exchange
+ROAs announced: 210105 IPv4 39194 IPv6
+ROAs withdrawn: 2 IPv4 4 IPv6
+! weryfikacja poszczególnych prefiksów z tablicy BGP - statusy 'V', 'I' i 'N':
+RTR#show bgp ipv4 unicast
+[...]
+RPKI validation codes: V valid, I invalid, N Not found
+Network Next Hop Metric LocPrf Weight Path
+V*>i 1.0.0.0/24 100.100.2.1 10 100 0 13335 i
+V*>i 1.1.1.0/24 100.100.2.1 10 100 0 13335 i
+I*>i 1.6.0.0/22 100.100.2.1 10 100 0 13335 i
+N*>i 33.56.0.0/16 100.100.2.3 100 0 i
