@@ -1,0 +1,8 @@
+root@dARkSTar~> TZ=UTC capinfos -V -u -i -c output.pcap > pcapinfo.txt
+File name: output.pcap
+Version: 1.0
+Capture Duration: 300.123456 seconds
+Start time: Thu Jan 1 00:00:00 1970
+End time: Thu Jan 1 00:05:00 1970
+Interface info: Device eth0 (id: 0)
+Number of packets: 1500
