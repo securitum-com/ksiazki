@@ -1,0 +1,10 @@
+interface FastEthernet0/1
+switchport access vlan 100
+switchport mode access
+switchport nonegotiate
+switchport port-security
+switchport port-security mac-address aaaa.bbbb.cccc
+switchport port-security mac-address aaaa.bbbb.dddd
+switchport port-security mac-address sticky
+switchport port-security violation restrict
+spanning-tree portfast
