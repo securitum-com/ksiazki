@@ -1,0 +1,7 @@
+sudo apt install gnuradio gr-osmosdr limesuite liblimesuite-dev limesuite-
+udev limesuite-images cubicsdr soapysdr-module-lms7
+sudo python3 -m pip --upgrade pip
+sudo python3 -m pip install urh
+sudo python3 -m pip install --upgrade numpy
+sudo apt install xterm
+sudo apt install gr-limesdr
