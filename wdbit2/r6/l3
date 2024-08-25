@@ -1,0 +1,7 @@
+stefan@desktop:~$ sha512sum -c SHA512SUMS
+debian-12.5.0-amd64-netinst.iso: OK
+sha512sum: debian-edu-12.5.0-amd64-netinst.iso: No such file or directory
+debian-edu-12.5.0-amd64-netinst.iso: FAILED open or read
+sha512sum: debian-mac-12.5.0-amd64-netinst.iso: No such file or directory
+debian-mac-12.5.0-amd64-netinst.iso: FAILED open or read
+sha512sum: WARNING: 2 listed files could not be read
