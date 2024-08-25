@@ -1,0 +1,11 @@
+#Strings Sniffer
+#@category Vulns
+#@keybinding
+#@menupath
+#@toolbar
+from ghidra.app.util import XReferenceUtil
+from ghidra.program.util import DefinedDataIterator
+for item in DefinedDataIterator.definedStrings(currentProgram):
+for ref in XReferenceUtil.getXRefList(item):
+if item.toString().find("%s") > -1:
+print("Addr: {} Path: {}".format(ref, item.toString()))
