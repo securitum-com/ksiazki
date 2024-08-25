@@ -1,0 +1,6 @@
+$GpoLinks = @(
+$(New-Object PSObject -Property @{ Name = "Shutdown DC by specific users" ;
+OU = "OU=Domain Controllers"; Order = 1 ; LinkEnabled = 'YES' })
+)
+.$ScriptsLocation\Scripts\Link-GpoToOU.ps1 -GpoLinks $GpoLinks -Verbose
+Set-Location $location
