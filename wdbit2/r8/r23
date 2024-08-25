@@ -1,0 +1,10 @@
+R10#traceroute 100.100.33.1 source loopback 0
+Type escape sequence to abort.
+Tracing the route to 100.100.33.1
+VRF info: (vrf in name/id, vrf out name/id)
+1 100.100.1.66 5 msec 1 msec 1 msec
+R1-64500#traceroute 100.100.33.1 source loopback 0
+Type escape sequence to abort.
+Tracing the route to 100.100.33.1
+VRF info: (vrf in name/id, vrf out name/id)
+1 100.100.1.66 2 msec 2 msec 1 msec
