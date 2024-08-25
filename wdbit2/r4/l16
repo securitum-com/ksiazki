@@ -1,0 +1,5 @@
+$location = Get-Location
+$dsnAME = (Get-ADDomain).DistinguishedName
+$netbios = (Get-ADDomain).Name
+$ScriptsLocation = "C:\Tools\WdBIT2-AD\WindowsLAPS"
+Set-Location $ScriptsLocation
