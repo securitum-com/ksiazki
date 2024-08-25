@@ -1,0 +1,38 @@
+! konfiguracja interfejsu routera w AS 64509 realizującego sesję BGP
+! z AS 64500 (IOS XR)
+interface gigabitEthernet 0/1/0/4
+ipv4 address 100.95.100.1 255.255.255.252
+ipv6 address 2001:db8:509:100::1/126
+ipv4 verify unicast source reachable-via rx
+! tryb strict od strony operatora (AS 64500 nie jest tranzytem)
+ipv6 verify unicast source reachable-via rx
+! tryb strict od strony operatora (AS 64500 nie jest tranzytem)
+! konfiguracja interfejsu routera w AS 64501 realizującego sesję BGP
+! z AS 64500 (JunOS)
+interfaces {
+xe-0/1/0 {
+unit 0 {
+family inet {
+address 100.91.100.1/30;
+rpf-check;
+}
+family inet6 {
+address 2001:db8:501:100::1/126;
+rpf-check;
+}}}}
+! konfiguracja interfejsu routera w AS 64500 realizującego sesję BGP
+! z AS 64509 (IOS XE)
+interface gigabitEthernet 0
+ipv4 address 100.95.100.2 255.255.255.252
+ipv6 address 2001:db8:509:100::2/126
+ipv4 verify unicast source reachable-via any allow-default ! tryb loose
+! od strony klienta
+ipv6 verify unicast source reachable-via any allow-default ! tryb loose
+! od strony klienta
+interface gigabitEthernet 6
+ipv4 address 100.91.100.2 255.255.255.252
+ipv6 address 2001:db8:501:100::2/126
+ipv4 verify unicast source reachable-via any allow-default ! tryb loose
+! od strony klienta
+ipv6 verify unicast source reachable-via any allow-default ! tryb loose
+! od strony klienta
