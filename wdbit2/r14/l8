@@ -1,0 +1,32 @@
+from scapy.all import *
+import random
+def create_packet(destination_ip, source_ip):
+ip_layer = IP(src=source_ip, dst=destination_ip)
+tcp_layer = TCP(dport=80)
+http_packet = (b"GET / HTTP/1.1\r\n"
+b"Host: example.com\r\n"
+b"User-Agent: Nmap Scripting Engine\r\n"
+b"Connection: close\r\n\r\n")
+packet = ip_layer / tcp_layer / Raw(load=http_packet)
+return packet
+def generate_decoy_ips(num_decoys, real_ip):
+decoys = []
+while len(decoys) < num_decoys:
+ip = f"{random.randint(1, 254)}.{random.randint(1, 254)}."
+ip += f"{random.randint(1, 254)}.{random.randint(1, 254)}"
+if ip not in decoys and ip != real_ip:
+decoys.append(ip)
+return decoys
+def main():
+target_ip = "192.168.0.1" # Adres IP docelowy
+real_ip = "192.168.1.100" # Prawdziwy adres IP
+decoy_count = 10 # Liczba fałszywych adresów IP
+decoy_ips = generate_decoy_ips(decoy_count, real_ip)
+decoy_ips.append(real_ip)
+packets = []
+for ip in decoy_ips:
+packet = create_packet(target_ip, ip)
+packets.append(packet)
+wrpcap("generated_decoy_packets.pcap", packets)
+if __name__ == "__main__":
+main()
