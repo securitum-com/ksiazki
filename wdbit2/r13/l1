@@ -1,0 +1,7 @@
+HTTP/1.1 302 Found
+Location: https://server.example.com/authorize?
+response_type=code
+&scope=openid%20profile%20email
+&client_id=s6BhdRkqt3
+&state=af0ifjsldkj
+&redirect_uri=https%3A%2F%2Fclient.example.org%2Fcb
