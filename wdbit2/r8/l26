@@ -1,0 +1,7 @@
+!
+interface GigabitEthernet1
+ipv6 address 2001:DB8:100:1::10/64
+ipv6 ospf authentication ipsec spi 512 sha1
+DA39A3EE5E6B4B0D3255BFEF95601890AFD80701
+ipv6 ospf 100 area 0
+!
