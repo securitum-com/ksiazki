@@ -1,0 +1,12 @@
+key chain BGLR
+key 1
+key-string BardzoTrudnyCiagDlaOSPF
+cryptographic-algorithm hmac-sha-512
+send-lifetime 00:00:00 Jan 1 2024 00:00:00 Dec 31 2026
+!
+interface GigabitEthernet1
+ip ospf authentication key-chain BGLR
+!
+router ospfv3 100
+area 0 authentication key-chain BGLR
+!
