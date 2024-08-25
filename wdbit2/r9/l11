@@ -1,0 +1,22 @@
+$ hashcat -m 2500 bettercap-wifi-handshakes.hccapx wordlist.txt
+hashcat (v6.2.5) starting...
+[...]
+Session..........: hashcat
+Status...........: Cracked
+Hash.Name........: WPA-EAPOL-PBKDF2
+Hash.Target......: bettercap-wifi-handshakes.hccapx
+Time.Started.....: Mon Jun 30 12:00:00 2024 (1 sec)
+Time.Estimated...: Mon Jun 30 12:01:00 2024 (1 min)
+Guess.Base.......: File (wordlist.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........: 12540 H/s (2.60ms) @ Accel:64 Loops:32 Thr:256 Vec:1
+Speed.#2.........: 23560 H/s (2.30ms) @ Accel:64 Loops:32 Thr:256 Vec:1
+Speed.#*.........: 36100 H/s
+Recovered........: 1/1 (100.00%) Digests, 1/1 (100.00%) Salts
+Progress.........: 512000/133456789 (0.38%)
+Rejected.........: 0/512000 (0.00%)
+Restore.Point....: 511999/133456789 (0.38%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidates.#1....: password123 -> admin
+Candidates.#2....: 12345678 -> qwerty
+[b] WPA-EAPOL-PBKDF2 cracking session completed. [c] Hash cracked in 1 min
