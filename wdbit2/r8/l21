@@ -1,0 +1,7 @@
+R666(config)#int lo33
+R666(config-if)#ip address 100.100.33.1 255.255.255.0
+R666(config-if)#ip ospf 100 area 33
+R666(config-if)#ip ospf network point-to-point
+R666(config-if)#ipv6 address 2001:DB8:100:33::1/64
+R666(config-if)#ipv6 ospf 100 area 33
+R666(config-if)#ipv6 ospf network point-to-point
