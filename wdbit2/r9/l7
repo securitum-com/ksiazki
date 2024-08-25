@@ -1,0 +1,10 @@
+wlan0 » wifi.recon on
+[09:23:11] [sys.log] [inf] wifi using interface wlan0 (f6:50:6e:35:db:fc)
+[09:23:11] [sys.log] [war] wifi could not set interface wlan0 txpower to 30,
+'Set Tx Power' requests not supported
+[09:23:13] [sys.log] [inf] wifi started (min rssi: -200 dBm)
+wlan0 » [09:23:13] [sys.log] [inf] wifi channel hopper started.
+wlan0 » [09:23:13] [wifi.ap.new] wifi access point so-smart (-30 dBm)
+detected as de:ad:ba:be:00:01 (Routerboard.com).
+wlan0 » [09:23:14] [wifi.client.new] new station 18:3e:ef:d1:16:ed (Apple,
+Inc.) detected for so-smart (de:ad:ba:be:00:01)
