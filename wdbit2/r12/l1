@@ -1,0 +1,11 @@
+# HelloWorld Script
+#@author Ghidra Hacker
+#@category INFILTRATE
+#@keybinding X
+#@menupath File.Run.Script
+#@toolbar
+prgm = ghidra.program.flatapi.FlatProgramAPI(currentProgram)
+fn = prgm.getFirstFunction()
+while fn is not None:
+print("Entry - {} function - {}".format(fn.getEntryPoint(), fn.getName()))
+fn = prgm.getFunctionAfter(fn)
