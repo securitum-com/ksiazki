@@ -1,0 +1,8 @@
+# Polecenie wykonane w kontenerze przejętym przez atakującego
+$ curl --unix-socket /var/run/docker.sock http://localhost/containers/json
+[{"Id":"dbc2b25527245e92be697ade7e399d84b7d19efd8e203184d21c1c1f330c21bd",
+"Names":["/kali1"],[...],"Mounts":[{"Type":"bind","Source":"/var/run/docker.
+sock","Destination":"/var/run/docker.sock","Mode":"ro","RW":false,"Propagati
+on":"rprivate"}],"IPAddress":"172.17.0.2",[...]}
+{"Id":"92a5b1b13c9b70c8982cf76777f0701cda5c11dd506699d19e3b14607218342a",
+"Names":["/kali2"],[...],"IPAddress":"172.17.0.3",[...]}]
