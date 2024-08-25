@@ -1,0 +1,6 @@
+as64503#show bgp ipv4 unicast
+[...]
+Origin-AS validation codes: V valid, I invalid, N not-found, D disabled
+Network Next Hop Metric LocPrf Weight Path
+V*> 100.100.0.0/16 100.64.39.9 0 64509 64500 i
+V* 100.92.23.2 0 64502 64501 64500 i
