@@ -1,0 +1,7 @@
+as64499(config)#ip route 100.100.33.0 255.255.255.0 Null0 name BGPv4-AS64500
+as64499(config)#ipv6 route 2001:db8:100:33::/64 null0 name BGPv6-AS64500
+as64499(config)#router bgp 64499
+as64499(config-router)#address-family ipv4 unicast
+as64499(config-router-af)#network 100.100.33.0 mask 255.255.255.0
+as64499(config-router-af)#address-family ipv6 unicast
+as64499(config-router-af)#network 2001:db8:100:33::/64
