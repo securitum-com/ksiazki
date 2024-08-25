@@ -1,0 +1,5 @@
+root@serwer:~# ps -ef
+root@serwer:~# systemctl --type service --all
+root@serwer:~# ls -la /etc/init.d/
+root@serwer:~# cat /etc/rc.local
+root@serwer:~# ss -nlp lub netstat -nlp
