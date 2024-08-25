@@ -1,0 +1,5 @@
+$location = Get-Location
+$ScriptsLocation = "C:\WdBIT2-AD\Other Scripts"
+Set-Location $ScriptsLocation
+Import-Module ActiveDirectory
+.$ScriptsLocation\Scripts\Set-BGAPermissions.ps1 -BGAccount "Sekurak" -Verbose
